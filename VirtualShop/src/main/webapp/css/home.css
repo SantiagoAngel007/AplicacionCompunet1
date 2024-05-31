@@ -146,23 +146,31 @@ button {
     padding-left: 90px; /* mismo tamaño que los elementos de la etiqueta */
 }
 
-.div_CCSA{
-    margin-left: 10px;
+.div_CCSA {
     margin-top: 10px;
     margin-bottom: 5px;
     margin-right: 10px;
-    /*background-color: #28C985;*/
-    width: 100%;
-    justify-content: left;
     text-align: start;
     font-family: 'Poppins', Arial, sans-serif; /* Poppins como primera opción, luego Arial, y finalmente una fuente genérica */
 }
 
-.div_boton_return{
+.div_boton_return {
     margin-left: 0px;
-    margin-top: 40px;
+    margin-top: 10px;
     margin-bottom: 5px;
     margin-right: 10px;
+    /* background-color: #28C985; */
+    width: 5%;
+    height: 10%;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.carrito {
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-right: 50px;
     /* background-color: #28C985; */
     width: 5%;
     height: 10%;
@@ -249,10 +257,11 @@ button {
 /* Estilos para el contenedor de input */
 .intermed-bloq {
     position: relative;
-    width: 400px; /* Ancho del contenedor de input en píxeles */
+    width: 400px;
     /* background-color: #04AA6D; */
-    left: calc(50% - 200px); /* Centra el contenedor horizontalmente */
-    top: 20%;
+    left: calc(50% - 200px);
+    top: 10%;
+    margin-bottom: 10%;
     border: 2px solid #FFF300;
     border-radius: 10px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -270,10 +279,7 @@ button {
 
 .bloq-sup{
     position: fixed;
-    left: 0;
     width: 100%;
-    height: 13%;
-    top: 0;
     background-color: #f2f2f2;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
@@ -294,30 +300,26 @@ button {
 .bloq-sup_secd {
     display: flex;
     align-items: center;
-    margin-top: auto;
-    margin-top: -25px;
-    margin-left: 5px;
-
+    justify-content: space-between;
 }
 
 .boton-2 {
-    margin-right: 10px; /* Ajusta el margen según sea necesario */
-    background-size: cover; /* Ajusta el tamaño de la imagen según sea necesario */
-    background-repeat: no-repeat; /* Evita la repetición de la imagen */
-    border: none; /* Quita el borde del botón */
-    width: 55px; /* Ajusta el ancho del botón según sea necesario */
-    height: 55px; /* Ajusta la altura del botón según sea necesario */
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .titulo {
-    margin-right: 20px; /* Ajusta el margen según sea necesario */
-    line-height: 62px;
+    flex-grow: 1;
+    margin-left: 10px;
+    text-align: center;
 }
 
 .descripcion {
-    margin-left: 12px;
-    line-height: 0px;  /* Ajusta el margen según sea necesario */
-    font-family: 'Poppins', Arial, sans-serif; /* Poppins como primera opción, luego Arial, y finalmente una fuente genérica */
+    text-align: left;
+    margin-left: 10px;
+    line-height: 0px;
+    font-family: 'Poppins', Arial, sans-serif;
 }
 
 @media (max-width: 600px) {
