@@ -1,5 +1,6 @@
 <%@ page import="java.util.List" %>
-<%@ page import="org.example.virtualshop.model.Product" %><%--
+<%@ page import="org.example.virtualshop.model.Product" %>
+<%@ page import="org.example.virtualshop.model.User" %><%--
   Created by IntelliJ IDEA.
   User: juan
   Date: 30/05/24
@@ -17,7 +18,7 @@
 
 <%
 
-    String username = (String) request.getSession().getAttribute("usuario");
+    User username = (User) request.getSession().getAttribute("usuario");
 
 %>
 
@@ -33,11 +34,11 @@
                         <h1>Mercado Libre</h1>
                     </div>
                     <div class="descripcion">
-                        <h3>Home - Bienvenido <%= username %></h3>
+                        <h3>Home - Bienvenido <%= username.getName() %></h3>
                     </div>
                 </div>
                 <div class="carrito">
-                    <form action="SvUsers" method="GET">
+                    <form action="SvShoppingCart" method="GET">
                         <button class="boton-2" name="boton1" type="submit" onclick="redirigirServiciosAsignaciondesdeRegistro()">
                             <img src="${pageContext.request.contextPath}/Images/carro-de-la-compra.png" height="55" width="55" alt="Botón de retorno" />
                         </button>
@@ -62,6 +63,13 @@
                 <p>Descripción: <%= producto.getDescription() %></p>
                 <p>Precio: <%= producto.getPrice() %></p>
                 <p>Stock: <%= producto.getStock() %></p>
+                <form action="SvShoppingCart" method="POST">
+                    <input type="hidden" name="name" value="<%= producto.getName() %>">
+                    <input type="hidden" name="description" value="<%= producto.getDescription() %>">
+                    <input type="hidden" name="price" value="<%= producto.getPrice() %>">
+                    <input type="hidden" name="stock" value="<%= producto.getStock() %>">
+                    <button name="btn_iniciar" type="submit" class="btn-1">Agregar Al Carrito</button>
+                </form>
                 <p>----------------------------------------------------</p>
 
                 <%cont = cont + 1;%>

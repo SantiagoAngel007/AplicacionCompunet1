@@ -16,10 +16,7 @@ public class SvUsers extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        // Para pruebas, envía una respuesta básica
-        System.out.println("Exito");
-        response.setContentType("text/html");
-        response.getWriter().write("GET method is not supported.");
+
     }
 
     @Override
@@ -41,7 +38,7 @@ public class SvUsers extends HttpServlet {
             for(User user : listaUsuarios){
                 if(user.getName().equals(name) && user.getPassword().equals(password)){
                     HttpSession session = request.getSession();
-                    session.setAttribute("usuario", name);
+                    session.setAttribute("usuario", user);
                     session.setAttribute("productos", listaProducts);
                     response.sendRedirect("home.jsp");
                     break;
