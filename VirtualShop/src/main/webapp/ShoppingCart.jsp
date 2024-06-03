@@ -106,6 +106,18 @@
                 </form>
             </div>
         </div>
+        <div id="modal-confirmacion" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
+                <p>Creando Materia...</p>
+            </div>
+        </div>
+        <div id="modal-error" class="modal" style="display: none;">
+            <div class="modal-contenido">
+                <span class="cerrar-modal" onclick="cerrarModalError()">&times;</span>
+                <p id="error-message-modal"></p>
+            </div>
+        </div>
         <div class="bloq-inf">
             <h4>Mercado Libre</h4>
             <h4>Todos los derechos reservados</h4>
@@ -113,5 +125,6 @@
         </div>
     </div>
 </div>
+<script src="${pageContext.request.contextPath}/JavaScript/script.js"></script>
 </body>
 </html>

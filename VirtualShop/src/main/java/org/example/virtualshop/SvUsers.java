@@ -21,7 +21,11 @@ public class SvUsers extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        //listaUsuarios.add(new User(request.getParameter("usuario"), request.getParameter("contraseña")));
+        // Inicializa la lista de usuarios y productos
+        List<User> listaUsuarios = new ArrayList<>();
+        List<Product> listaProducts = new ArrayList<>();
+
+        // Añadir usuarios y productos a las listas
         listaUsuarios.add(new User("Alex", "975318642"));
         listaUsuarios.add(new User("Paul", "975318642"));
         listaUsuarios.add(new User("Angel", "975318642"));
@@ -31,25 +35,29 @@ public class SvUsers extends HttpServlet {
         listaProducts.add(new Product("Keyboard", "Keyboard HP", 30.00, 30));
         listaProducts.add(new Product("Monitor", "Monitor LG", 150.00, 20));
 
+        // Obtener parámetros de la solicitud
         String name = request.getParameter("usuario");
         String password = request.getParameter("contraseña");
 
-        if(!listaUsuarios.isEmpty()){
-            for(User user : listaUsuarios){
-                if(user.getName().equals(name) && user.getPassword().equals(password)){
+        boolean userFound = false; // Variable para rastrear si se encuentra el usuario
+
+        if (!listaUsuarios.isEmpty()) {
+            for (User user : listaUsuarios) {
+                if (user.getName().equals(name) && user.getPassword().equals(password)) {
                     HttpSession session = request.getSession();
                     session.setAttribute("usuario", user);
                     session.setAttribute("productos", listaProducts);
                     response.sendRedirect("home.jsp");
-                    break;
-                } else {
-                    System.out.println("Usuario no encontrado");
+                    userFound = true;
                     break;
                 }
             }
         }
 
-        response.setContentType("text/html");
-        response.getWriter().write("Usuario: " + name + "<br>Contraseña: " + password);
+        if (!userFound) { // Si el usuario no se encontró, mostrar mensaje
+            response.setContentType("text/html");
+            response.getWriter().write("Usuario no encontrado");
+        }
     }
+
 }
