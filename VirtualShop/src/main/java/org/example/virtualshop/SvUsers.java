@@ -16,7 +16,7 @@ public class SvUsers extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.sendRedirect("ShoppingCart.jsp");
+
     }
 
     @Override

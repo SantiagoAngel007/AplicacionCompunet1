@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class="carrito">
-                    <form action="SvUsers" method="GET">
+                    <form action="SvShoppingCart" method="GET">
                         <button class="boton-2" name="boton1" type="submit" onclick="redirigirServiciosAsignaciondesdeRegistro()">
                             <img src="${pageContext.request.contextPath}/Images/carro-de-la-compra.png" height="55" width="55" alt="Botón de retorno" />
                         </button>
