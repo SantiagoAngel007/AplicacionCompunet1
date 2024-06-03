@@ -3,8 +3,8 @@
 <%@ page import="org.example.virtualshop.model.User" %><%--
   Created by IntelliJ IDEA.
   User: juan
-  Date: 30/05/24
-  Time: 3:35 p. m.
+  Date: 2/06/24
+  Time: 8:00 p. m.
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -34,7 +34,7 @@
                         <h1>Mercado Libre</h1>
                     </div>
                     <div class="descripcion">
-                        <h3>Home - Bienvenido <%= username.getName() %></h3>
+                        <h3>Carrito - Bienvenido <%= username.getName() %></h3>
                     </div>
                 </div>
                 <div class="carrito">
@@ -47,12 +47,12 @@
             </div>
         </div>
         <div class="bloq-mid">
-<%--            <div class="intermed">--%>
-<%--                <h1>Iniciar Sesión</h1>--%>
-<%--            </div>--%>
+            <%--            <div class="intermed">--%>
+            <%--                <h1>Iniciar Sesión</h1>--%>
+            <%--            </div>--%>
             <div class="intermed-bloq">
                 <%
-                    List<Product> listaProductos = (List<Product>) request.getSession().getAttribute("productos");
+                    List<Product> listaProductos = username.getListaProducts();
                     int cont = 1;
 
                     for (Product producto : listaProductos) {
@@ -63,13 +63,6 @@
                 <p>Descripción: <%= producto.getDescription() %></p>
                 <p>Precio: <%= producto.getPrice() %></p>
                 <p>Stock: <%= producto.getStock() %></p>
-                <form action="SvShoppingCart" method="POST">
-                    <input type="hidden" name="name" value="<%= producto.getName() %>">
-                    <input type="hidden" name="description" value="<%= producto.getDescription() %>">
-                    <input type="hidden" name="price" value="<%= producto.getPrice() %>">
-                    <input type="hidden" name="stock" value="<%= producto.getStock() %>">
-                    <button name="btn_iniciar" type="submit" class="btn-1">Agregar Al Carrito</button>
-                </form>
                 <p>----------------------------------------------------</p>
 
                 <%cont = cont + 1;%>

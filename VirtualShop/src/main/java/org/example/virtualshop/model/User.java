@@ -1,8 +1,15 @@
 package org.example.virtualshop.model;
 
+import org.example.virtualshop.SvShoppingCart;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
     public String name;
     public String password;
+
+    private static List<Product> listaProducts = new ArrayList<Product>();
 
     public User() {
 
@@ -29,4 +36,11 @@ public class User {
         this.password = password;
     }
 
+    public List<Product> getListaProducts() {
+        return listaProducts;
+    }
+
+    public void setListaProducts(List<Product> listaProducts) {
+        User.listaProducts = listaProducts;
+    }
 }
