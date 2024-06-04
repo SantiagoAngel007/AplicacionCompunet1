@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Estilo para la barra superior */
+.bloq-sup {
+    background-color: #fff300;
+    color: #FFFFFF;
+    padding: 10px;
+    text-align: center;
+}
+
+.bloq-sup_secd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div_boton_return img {
+    cursor: pointer;
+}
+
+.titulo h1 {
+    margin: 0;
+}
+
+/* Estilo para el contenido principal */
+.bloq-mid {
+    padding: 20px;
+}
+
+.bloq-mid form {
+    margin-bottom: 20px;
+}
+
+/* Estilo para el pie de página */
+.bloq-inf {
+    background-color: #c9b428;
+    color: #FFFFFF;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Animación para el fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.btn-regresar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF9900;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn-regresar:hover {
+    background-color: #FFAD33;
+}
+
+.form-1 {
+    width: 100%;
+    border-collapse: collapse;
+    /* background-color: aqua; */
+    margin-bottom: 10px;
+}
+
+.form-1 th,
+.form-1 td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.form-1 th {
+    background-color: #f2f2f2;
+}
+
+.form-1 tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.form-1 tbody tr:hover {
+    background-color: #ddd;
+}

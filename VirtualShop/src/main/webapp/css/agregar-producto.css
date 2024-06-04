@@ -1,0 +1,100 @@
+/* Estilos para la vista de agregar nuevos productos */
+
+/* Contenedor principal */
+#page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #f2f2f2; /* Color de fondo */
+}
+
+/* Contenedores superior e inferior */
+.bloq-sup,
+.bloq-inf {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background-color: #aaaaaa; /* Color de fondo */
+    z-index: 9999;
+    text-align: center;
+    padding: 10px 0; /* Espacio alrededor del texto */
+}
+
+.bloq-sup_secd {
+    display: flex;
+    align-items: center;
+}
+
+.bloq-inf {
+    bottom: 0;
+}
+
+/* Contenedor del título */
+.titulo {
+    margin-right: 20px;
+}
+
+/* Título */
+.titulo h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #000; /* Color del texto */
+}
+
+/* Descripción */
+.descripcion {
+    margin-left: 12px;
+    font-size: 16px;
+    color: #333; /* Color del texto */
+}
+
+/* Contenedor del formulario */
+.bloq-mid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Formulario */
+.form-1 {
+    width: 400px;
+    background-color: #fff; /* Color de fondo */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Inputs */
+.form-1 input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px;
+}
+
+/* Botón */
+.btn-1 {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #c9b428; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    cursor: pointer;
+}
+
+.btn-1:hover {
+    background-color: #c9b428; /* Color de fondo al pasar el mouse */
+}
+
+/* Pie de página */
+.bloq-inf h4 {
+    margin: 0;
+    font-size: 14px;
+    color: #333; /* Color del texto */
+}

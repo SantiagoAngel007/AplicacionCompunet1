@@ -1,0 +1,9 @@
+Tablet,Una tablet,1000000.0,1
+Huawei xd,nose,250.0,3
+Laptop,Laptop HP,500.0,10
+Mouse,Mouse Logitech,20.0,50
+Keyboard,Keyboard HP,30.0,30
+Monitor,Monitor LG,150.0,20
+TV,Just a tv,123444.0,12
+Aint worry,no no,0.0,1
+Maverick,Primera pelicula,1000.0,1
