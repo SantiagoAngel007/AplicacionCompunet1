@@ -29,7 +29,7 @@
         <div class="bloq-sup">
             <div class="bloq-sup_secd">
                 <div class="div_boton_return">
-                    <img src="${pageContext.request.contextPath}/Images/mercado-libre-svgrepo-com.png" height="55" width="55" alt="Botón de retorno" />
+                    <a href="home.jsp">  <button  class="boton-2" name="boton1" type="button"><img src="${pageContext.request.contextPath}/Images/retorno.png" height="55" width="55" alt="Botón de retorno" /> </button> </a>
                 </div>
                 <div class="titulo">
                     <div class="div_CCSA">
@@ -77,6 +77,7 @@
                     }
                 %>
 
+                <!--//<form action="HistorialCompras.jsp" method="POST">-->
                 <form action="SvBuy" method="POST">
                     <!-- Mostrar la cantidad y el costo total de cada producto -->
                     <% for (Map.Entry<String, Integer> entry : productCountMap.entrySet()) {

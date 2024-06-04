@@ -1,4 +1,4 @@
-<%--
+<%@ page import="org.example.virtualshop.model.User" %><%--
   Created by IntelliJ IDEA.
   User: merak
   Date: 30/05/2024
@@ -16,6 +16,13 @@
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/Images/mercado-libre-svgrepo-com.png">
 </head>
 <body>
+
+<%
+
+    User username = (User) request.getSession().getAttribute("usuario");
+
+%>
+
 <div id="page-container">
 
 

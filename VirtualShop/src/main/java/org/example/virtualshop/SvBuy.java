@@ -18,6 +18,7 @@ public class SvBuy extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
         User username = (User) request.getSession().getAttribute("usuario");
 
         // Obtener todos los productos del formulario
@@ -47,6 +48,6 @@ public class SvBuy extends HttpServlet {
 
         // Limpiar la lista de productos del usuario
         username.getListaProducts().clear();
-        response.sendRedirect("ShoppingCart.jsp");
+        response.sendRedirect("HistorialCompras.jsp");
     }
 }

@@ -19,6 +19,11 @@ public class User {
     public User(String name, String password) {
         this.name = name;
         this.password = password;
+        this.listaProducts = listaProducts;
+    }
+
+    public List<Product> getHistorialCompras() {
+        return listaProducts;
     }
 
     public String getName() {

@@ -17,6 +17,17 @@ public class Product {
         this.stock = stock;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return Double.compare(product.price, price) == 0 &&
+                stock == product.stock &&
+                name.equals(product.name) &&
+                description.equals(product.description);
+    }
+
     public String getName() {
         return name;
     }
@@ -47,5 +58,9 @@ public class Product {
 
     public void setStock(int stock) {
         this.stock = stock;
+    }
+
+    public int getQuantity() {
+        return stock;
     }
 }
